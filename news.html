@@ -72,15 +72,31 @@
                 description: 'Brief description of the news item.',
                 imgSrc: 'assets/owner.png',
             },
+            {
+                title: 'Test',
+                description: 'Brief description of the news item.',
+                imgSrc: 'assets/owner.png',
+            },
+            {
+                title: 'Test',
+                description: 'Brief description of the news item.',
+                imgSrc: 'assets/owner.png',
+            },
+            {
+                title: 'Test',
+                description: 'Brief description of the news item.',
+                imgSrc: 'assets/owner.png',
+            },
             // Add more news items here
         ];
 
-        function displayNews(page = 1) {
+        function displayNews(page = 1, filteredItems = null) {
             const itemsPerPage = 3;
             const start = (page - 1) * itemsPerPage;
             const end = start + itemsPerPage;
-
-            const filteredNews = newsItems.slice(start, end);
+        
+            const newsData = filteredItems ? filteredItems : newsItems;
+            const filteredNews = newsData.slice(start, end);
 
             let newsHtml = '';
 
@@ -104,10 +120,11 @@
             document.getElementById('news-list').innerHTML = newsHtml;
         }
 
-        function setupPagination() {
+        function setupPagination(filteredItems = null) {
             // Add pagination dynamically based on the number of news items
             const itemsPerPage = 3;
-            const numPages = Math.ceil(newsItems.length / itemsPerPage);
+            const newsData = filteredItems ? filteredItems : newsItems;
+            const numPages = Math.ceil(newsData.length / itemsPerPage);
 
             let paginationHtml = '';
 
@@ -171,16 +188,20 @@
         function handleSearch() {
             $('#search-news').on('input', function () {
                 const searchTerm = $(this).val().toLowerCase();
-    
+        
                 const filteredNews = newsItems.filter(news => {
                     return news.title.toLowerCase().includes(searchTerm) || news.description.toLowerCase().includes(searchTerm);
                 });
-    
+        
+                // Clear existing pagination elements
+                $('.pagination .page-item:not(#previous-page, #next-page)').remove();
+        
                 displayNews(1, filteredNews);
                 setupPagination(filteredNews);
                 updatePagination();
             });
         }
+        
     
         function init() {
             displayNews();
