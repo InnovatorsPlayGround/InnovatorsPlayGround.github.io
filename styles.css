@@ -21,9 +21,15 @@
 .contact-section {
     margin-top: 40px;
     margin-bottom: 40px;
-    text-align: center;
 }
+
 .contact-form {
     display: inline-block;
     text-align: left;
+}
+
+.social-btn {
+    margin: 0 5px;
+    width: 50%;
+    max-width: 120px;
 }
