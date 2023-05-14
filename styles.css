@@ -44,18 +44,18 @@
 }
 
 .navbar-custom .nav-link {
-    color: black;
+    color: black !important;
 }
 
 .navbar-custom .navbar-brand {
-    color: black;
+    color: black !important;
 }
 
 /* This is to ensure the color remains black even when a nav link is hovered over or clicked */
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link:focus,
 .navbar-custom .nav-link:active {
-    color: black;
+    color: black !important;
 }
 
 /* Change color of toggler icon */
