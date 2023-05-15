@@ -65,7 +65,10 @@
     </section>
     <section id="featured" class="container mt-5">
         <h2 class="text-center mb-4">Featured Content</h2>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="row">
+            <div class="col-md-1"></div>  <!-- This is a new column on the left -->
+            <div class="col-md-10">  <!-- Adjust the class here from col-md-12 to col-md-10 -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -105,6 +108,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+        </div>
+    </div>
+            <div class="col-md-1"></div>  <!-- This is a new column on the right -->
         </div>
     </section>
     
