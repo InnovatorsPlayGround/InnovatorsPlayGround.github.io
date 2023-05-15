@@ -57,6 +57,8 @@
             </form>
             <ul id="todo-list" class="list-group">
             </ul>
+            <button id="save" class="btn btn-primary mt-2">Save tasks</button>
+
         </main>
 
         <footer class="bg-dark text-center text-white py-3">
@@ -103,6 +105,24 @@
     
                 list.appendChild(item);
             });
+            const saveButton = document.getElementById('save');
+
+            saveButton.addEventListener('click', function() {
+                let tasks = [];
+                for (let i = 0; i < list.children.length; i++) {
+                    tasks.push(list.children[i].textContent.replace('Delete','').trim());
+                }
+                let tasksText = tasks.join('\n');
+
+                let blob = new Blob([tasksText], {type: "text/plain;charset=utf-8"});
+                let url = URL.createObjectURL(blob);
+
+                let a = document.createElement('a');
+                a.href = url;
+                a.download = 'tasks.txt';
+                a.click();
+            });
+
         </script>
     
     </body>
