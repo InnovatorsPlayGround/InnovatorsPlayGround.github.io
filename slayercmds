@@ -32,7 +32,7 @@ DOCTYPE html>
                     <!-- Add dropdown menu for bot commands -->
                     <li class="nav-item dropdown">
                         <a class="nav-link d-inline-block" href="botcommands.html">Bot Commands</a>
-                        <a class="nav-link dropdown-toggle d-inline-block" href="#" id="botCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CMD List</a>
+                        <a class="nav-link dropdown-toggle d-inline-block" href="#" id="botCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&plus;</a>
                         <div class="dropdown-menu" aria-labelledby="botCommands">
                             <a class="dropdown-item" href="server_commands.html">Server Commands</a>
                             <a class="dropdown-item" href="slayer_commands.html">Slayer Commands</a>
