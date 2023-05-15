@@ -1,17 +1,16 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovators' Playground - Home</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Innovators' Playground - Old School RuneScape</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -30,7 +29,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    
+                    <!-- Add dropdown menu for bot commands -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="botcommands.html" id="botCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Bot Commands
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="botCommands">
+                            <a class="dropdown-item" href="server_commands.html">Server Commands</a>
+                            <a class="dropdown-item" href="slayer_commands.html">Slayer Commands</a>
+                            <a class="dropdown-item" href="skilling_commands.html">Skilling Commands</a>
+                            <a class="dropdown-item" href="economy_commands.html">Economy Commands</a>
+                            <a class="dropdown-item" href="casino_commands.html">Casino Commands</a>
+                        </div>
+                    </li>
+                    <!-- End of dropdown menu -->
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -42,7 +54,7 @@
                 </ul>
             </div>
         </nav>
-        
+
     </header>
     <section id="news" class="container mt-5">
         <h2 class="text-center mb-4">Latest News</h2>
